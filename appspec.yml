@@ -1,0 +1,5 @@
+version: 0.0
+os: linux
+files:
+  - source: /archivos/mensaje.txt
+    destination: /home/ubuntu/deploy-test  # Ruta donde se copiará el TXT
