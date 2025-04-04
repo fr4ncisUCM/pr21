@@ -1,5 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /archivos/mensaje.txt
-    destination: /home/ubuntu/deploy-test  # Ruta donde se copiará el TXT
+  - source: /
+    destination: /var/www/html
+hooks:
+  AfterInstall:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: root
