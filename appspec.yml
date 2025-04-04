@@ -1,4 +1,4 @@
-# version:0.0
+# version: 0.0
 # os: linux
 # files:
 #   - source: /
@@ -18,15 +18,6 @@ hooks:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
-    - run: |
-        # Asegurarse de que la carpeta de destino exista y tenga los permisos correctos
-        mkdir -p /var/www/flask-app
-        chown -R ec2-user:ec2-user /var/www/flask-app
-        chmod -R 755 /var/www/flask-app
-        # Limpiar el directorio de destino para evitar conflictos
-        rm -rf /var/www/flask-app/*
-        # Ajustar permisos de los scripts en el directorio temporal
-        chmod +x $CODEDEPLOY_SRC_DIR/scripts/*.sh
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
