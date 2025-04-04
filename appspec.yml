@@ -15,9 +15,6 @@ files:
     destination: /var/www/flask-app
 hooks:
   BeforeInstall:
-    - location: scripts/make_scripts_executable.sh
-      timeout: 300
-      runas: root
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
