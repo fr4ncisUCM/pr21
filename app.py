@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "¡Hola dde mi aplicación Flask en EC2!"
+    return "¡Hla dde mi aplicación Flask en EC2!"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
