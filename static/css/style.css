@@ -1,12 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradiente de colores */
     text-align: center;
     padding-top: 50px;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes por defecto */
 }
 
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad para que el gradiente sea visible */
     padding: 30px;
     margin: auto;
     width: 50%;
